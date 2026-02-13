@@ -3,57 +3,37 @@ let isArabic = false;
 function toggleLanguage() {
     isArabic = !isArabic;
     
-    // 1. تغيير اتجاه الصفحة (L-R أو R-L)
+    // تغيير اتجاه الصفحة
     document.body.dir = isArabic ? "rtl" : "ltr";
     
-    // 2. مصفوفة الترجمة الشاملة لجميع العناصر
-    const translations = {
-        // نصوص القائمة الجانبية (Aside)
+    // قاموس الترجمة
+    const dict = {
         "heroTitle": isArabic ? "سلطان هزازي" : "Sultan Hazazi",
-        "heroSub": isArabic ? "مهندس أنظمة مدمجة" : "Embedded Systems Engineer",
+        "heroSub": isArabic ? "الأنظمة المدمجة" : "Embedded Systems",
         "deptName": isArabic ? "هندسة الحاسب" : "Computer Engineering",
         "univName": isArabic ? "جامعة تبوك" : "University of Tabuk",
-        "langBtn": isArabic ? "English" : "العربية",
-
-        // روابط التنقل (Navigation)
         "navHome": isArabic ? "الرئيسية" : "Home",
         "navAbout": isArabic ? "عني" : "About",
-        "navSkills": isArabic ? "مهاراتي" : "Skills",
+        "navSkills": isArabic ? "المهارات" : "Skills",
         "navProjects": isArabic ? "المشاريع" : "Projects",
         "navCert": isArabic ? "الشهادات" : "Certificates",
-        "navContact": isArabic ? "تواصل" : "Contact",
-
-        // عناوين الأقسام (Section Titles)
+        "navContact": isArabic ? "تواصل معي" : "Contact",
+        "welcomeTitle": isArabic ? "مرحباً بكم في عالمي التقني" : "Welcome to My Technical World",
         "titleAbout": isArabic ? "من أنا؟" : "Who Am I?",
-        "projectsTitle": isArabic ? "معرض المشاريع" : "Portfolio",
+        "skillsTitle": isArabic ? "الترسانة التقنية" : "Technical Arsenal",
+        "projectsTitle": isArabic ? "معرض الأعمال" : "Portfolio",
         "uniTitle": isArabic ? "مشاريع الجامعة" : "University Projects",
+        "elecTitle": isArabic ? "مشاريع الكهرباء والإلكترونيات" : "Electronics Projects",
         "embTitle": isArabic ? "الأنظمة المدمجة" : "Embedded Systems",
-        "certTitle": isArabic ? "الشهادات المهنية" : "Certifications",
-
-        // نص "عني" (النسخة المرتبة والاحترافية)
-        "textAbout": isArabic ? 
-            "أنا سلطان هزازي، طالب هندسة حاسب لدي شغف قوي بالأنظمة المدمجة، المتحكمات الدقيقة، والبرمجة منخفضة المستوى. أتخصص في تطوير أنظمة فعالة وموثوقة باستخدام C/C++ و STM32." : 
-            "I am Sultan Hazazi, a Computer Engineering student with a strong passion for Embedded Systems, Microcontrollers, and low-level programming. I specialize in developing efficient and reliable systems using C/C++, STM32, ARM Cortex, and RTOS."
+        "certTitle": isArabic ? "الشهادات" : "Certifications",
+        "contactTitle": isArabic ? "تواصل معي" : "Get In Touch",
+        "langBtn": isArabic ? "English" : "العربية",
+        "textAbout": isArabic ? "أنا سلطان هزازي، طالب هندسة حاسب وشغوف بالبرمجة منخفضة المستوى والأنظمة المدمجة." : "I am Sultan Hazazi, a Computer Engineering student with a strong passion for Embedded Systems and Low-level programming."
     };
 
-    // 3. حلقة تكرار لتحديث كل النصوص التي لها ID في الصفحة
-    for (const id in translations) {
-        const element = document.getElementById(id);
-        if (element) {
-            // استخدام innerHTML لكي تظهر التنسيقات مثل <br> أو <strong> إذا وجدت
-            element.innerHTML = translations[id];
-        }
-    }
-
-    // 4. تعديل اتجاه العناصر البصرية (مثل قسم About)
-    const aboutContainer = document.querySelector('.about-container');
-    if (aboutContainer) {
-        aboutContainer.style.flexDirection = isArabic ? 'row-reverse' : 'row';
-    }
-
-    // 5. تعديل محاذاة القائمة الجانبية
-    const aside = document.getElementById("colorlib-aside");
-    if (aside) {
-        aside.style.textAlign = isArabic ? "right" : "center";
+    // تنفيذ التغيير
+    for (let id in dict) {
+        let el = document.getElementById(id);
+        if (el) el.innerText = dict[id];
     }
 }
