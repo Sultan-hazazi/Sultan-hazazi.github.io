@@ -16,7 +16,7 @@ body {
 
 /* Sidebar */
 #colorlib-aside {
-    width: 250px;
+    width: 280px;
     height: 100vh;
     position: fixed;
     background: var(--sidebar-bg);
@@ -43,7 +43,7 @@ body {
 
 /* Main Content */
 #colorlib-main {
-    margin-left: 250px;
+    margin-left: 280px;
     padding: 40px;
     width: 100%;
 }
