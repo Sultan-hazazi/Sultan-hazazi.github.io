@@ -1,76 +1,76 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sultan Hazazi | Embedded Systems Portfolio</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <style>
-        :root {
-            --primary: #1a252f;
-            --accent: #3498db;
-            --bg-light: #f4f7f6;
-            --text-dark: #2c3e50;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sultan Hazazi | Embedded Systems Portfolio</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+<style>
+:root {
+    --primary: #1a252f;
+    --accent: #3498db;
+    --bg-light: #f4f7f6;
+    --text-dark: #2c3e50;
+}
 
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; transition: all 0.3s ease; }
-        
-        /* Navigation */
-        nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); padding: 15px; text-align: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
-        nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9em; text-transform: uppercase; }
-        nav a:hover { color: var(--accent); }
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; margin: 0; color: var(--text-dark); background: var(--bg-light); line-height: 1.6; transition: all 0.3s ease; }
 
-        /* Hero Header */
-        header { 
-            background: linear-gradient(rgba(26, 37, 47, 0.9), rgba(26, 37, 47, 0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80'); 
-            background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; 
-        }
-        header h1 { font-size: 3em; margin: 0; letter-spacing: 3px; text-transform: uppercase; }
-        header p { font-size: 1.2em; color: var(--accent); font-weight: 300; margin-top: 10px; }
+/* Navigation */
+nav { position: sticky; top: 0; background: rgba(255,255,255,0.95); backdrop-filter: blur(5px); padding: 15px; text-align: center; z-index: 1000; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: 600; font-size: 0.9em; text-transform: uppercase; }
+nav a:hover { color: var(--accent); }
 
-        .container { max-width: 1100px; margin: auto; padding: 20px; }
-        
-        /* Sections */
-        section { padding: 60px 0; border-bottom: 1px solid #ddd; }
-        h2 { text-align: center; font-size: 2.2em; margin-bottom: 40px; color: var(--primary); }
-        h2 i { color: var(--accent); margin-right: 10px; }
+/* Hero Header */
+header { 
+    background: linear-gradient(rgba(26, 37, 47, 0.9), rgba(26, 37, 47, 0.9)), url('https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=1000&q=80'); 
+    background-size: cover; background-position: center; color: white; padding: 100px 20px; text-align: center; 
+}
+header h1 { font-size: 3em; margin: 0; letter-spacing: 3px; text-transform: uppercase; }
+header p { font-size: 1.2em; color: var(--accent); font-weight: 300; margin-top: 10px; }
 
-        /* About */
-        #textAbout { text-align: center; max-width: 800px; margin: auto; font-size: 1.15em; color: #555; }
+.container { max-width: 1100px; margin: auto; padding: 20px; }
 
-        /* Skills */
-        .skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
-        .skill-card { background: white; padding: 12px 25px; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: 600; border: 1px solid #eee; transition: 0.3s; }
-        .skill-card:hover { border-color: var(--accent); transform: scale(1.05); }
+/* Sections */
+section { padding: 60px 0; border-bottom: 1px solid #ddd; }
+h2 { text-align: center; font-size: 2.2em; margin-bottom: 40px; color: var(--primary); }
+h2 i { color: var(--accent); margin-right: 10px; }
 
-        /* Projects Gallery */
-        .gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
-        .gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.08); transition: 0.3s; border: 1px solid #eee; }
-        .gallery-item:hover { transform: translateY(-10px); }
-        .gallery-img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
-        .gallery-content { padding: 20px; }
-        .gallery-content h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.3em; }
-        .tag { font-size: 0.7em; background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; font-weight: bold; }
+/* About */
+#textAbout { text-align: center; max-width: 800px; margin: auto; font-size: 1.15em; color: #555; }
 
-        /* Contact Section */
-        .contact-section { background: var(--primary); color: white; padding: 60px 20px; text-align: center; border-radius: 15px; margin: 40px 0; }
-        .contact-section h2 { color: white; }
-        .contact-links { margin-top: 20px; }
-        .contact-links a { color: var(--accent); text-decoration: none; font-size: 2em; margin: 0 20px; transition: 0.3s; }
-        .contact-links a:hover { color: white; transform: scale(1.2); }
+/* Skills */
+.skills-container { display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; }
+.skill-card { background: white; padding: 12px 25px; border-radius: 50px; box-shadow: 0 4px 6px rgba(0,0,0,0.05); font-weight: 600; border: 1px solid #eee; transition: 0.3s; }
+.skill-card:hover { border-color: var(--accent); transform: scale(1.05); }
 
-        footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; }
+/* Projects Gallery */
+.gallery-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; margin-top: 20px; }
+.gallery-item { background: white; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 20px rgba(0,0,0,0.08); transition: 0.3s; border: 1px solid #eee; }
+.gallery-item:hover { transform: translateY(-10px); }
+.gallery-img { width: 100%; height: 200px; object-fit: cover; background: #eee; }
+.gallery-content { padding: 20px; }
+.gallery-content h3 { margin: 0 0 10px 0; color: var(--primary); font-size: 1.3em; }
+.tag { font-size: 0.7em; background: var(--accent); color: white; padding: 4px 10px; border-radius: 4px; text-transform: uppercase; margin-bottom: 10px; display: inline-block; font-weight: bold; }
 
-        /* Floating Language Switch */
-        .lang-switch { position: fixed; bottom: 30px; right: 30px; background: var(--accent); color: white; border: none; padding: 15px 25px; border-radius: 50px; cursor: pointer; z-index: 2000; box-shadow: 0 5px 20px rgba(0,0,0,0.3); font-weight: bold; font-size: 1em; }
-        .lang-switch:hover { background: var(--primary); }
+/* Contact Section */
+.contact-section { background: var(--primary); color: white; padding: 60px 20px; text-align: center; border-radius: 15px; margin: 40px 0; }
+.contact-section h2 { color: white; }
+.contact-links { margin-top: 20px; }
+.contact-links a { color: var(--accent); text-decoration: none; font-size: 2em; margin: 0 20px; transition: 0.3s; }
+.contact-links a:hover { color: white; transform: scale(1.2); }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            header h1 { font-size: 2.2em; }
-            nav a { margin: 0 8px; font-size: 0.8em; }
-        }
-    </style>
+footer { text-align: center; padding: 40px; color: #888; border-top: 1px solid #eee; }
+
+/* Floating Language Switch */
+.lang-switch { position: fixed; bottom: 30px; right: 30px; background: var(--accent); color: white; border: none; padding: 15px 25px; border-radius: 50px; cursor: pointer; z-index: 2000; box-shadow: 0 5px 20px rgba(0,0,0,0.3); font-weight: bold; font-size: 1em; }
+.lang-switch:hover { background: var(--primary); }
+
+/* Responsive */
+@media (max-width: 768px) {
+    header h1 { font-size: 2.2em; }
+    nav a { margin: 0 8px; font-size: 0.8em; }
+}
+</style>
 </head>
 <body>
 
@@ -89,14 +89,15 @@
 </header>
 
 <div class="container">
-    
+    <!-- About -->
     <section id="about">
         <h2 id="titleAbout"><i class="fas fa-user-circle"></i> Who Am I?</h2>
         <p id="textAbout">
-            Computer Engineering student at the university, dedicated to mastering the art of low-level programming. My expertise lies in building efficient systems using C/C++, STM32, and RTOS.
+            Computer Engineering student at the university, dedicated to mastering low-level programming and embedded systems using C/C++ and STM32.
         </p>
     </section>
 
+    <!-- Skills -->
     <section id="skills">
         <h2 id="titleSkills"><i class="fas fa-microchip"></i> Technical Arsenal</h2>
         <div class="skills-container">
@@ -110,10 +111,11 @@
         </div>
     </section>
 
+    <!-- Projects -->
     <section id="projects">
         <h2 id="titleProjects"><i class="fas fa-project-diagram"></i> Featured Projects</h2>
         <div class="gallery-grid">
-            
+            <!-- Embedded -->
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=400" class="gallery-img" alt="Distance System">
                 <div class="gallery-content">
@@ -132,6 +134,7 @@
                 </div>
             </div>
 
+            <!-- Electrical -->
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1592659762303-90081d34b277?q=80&w=400" class="gallery-img" alt="Power Supply">
                 <div class="gallery-content">
@@ -140,19 +143,18 @@
                     <p id="p3Desc">High-efficiency AC to DC converter designed for laboratory testing.</p>
                 </div>
             </div>
-
         </div>
     </section>
 
+    <!-- Contact -->
     <section id="contact" class="contact-section">
-        <h2 id="titleContact" style="margin-bottom: 10px;">Get In Touch</h2>
+        <h2 id="titleContact">Get In Touch</h2>
         <p id="textContact">Interested in a collaboration or just want to say hi?</p>
         <div class="contact-links">
             <a href="mailto:sultan.hazazi.embedded@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
             <a href="https://github.com/Sultan-hazazi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
         </div>
     </section>
-
 </div>
 
 <footer>
@@ -160,37 +162,37 @@
 </footer>
 
 <script>
-    let isArabic = false;
-    function toggleLanguage() {
-        isArabic = !isArabic;
-        document.body.style.direction = isArabic ? 'rtl' : 'ltr';
-        
-        const translations = {
-            navAbout: isArabic ? "عني" : "About",
-            navSkills: isArabic ? "مهاراتي" : "Skills",
-            navProjects: isArabic ? "مشاريعي" : "Portfolio",
-            navContact: isArabic ? "تواصل" : "Contact",
-            heroTitle: isArabic ? "سلطان هزازي" : "Sultan Hazazi",
-            titleAbout: isArabic ? "من أنا؟" : "Who Am I?",
-            textAbout: isArabic ? "طالب هندسة حاسب متخصص في الأنظمة المدمجة والمتحكمات الدقيقة، أسعى لإتقان البرمجة منخفضة المستوى والأنظمة الزمنية الحقيقية باستخدام C و STM32." : "Computer Engineering student dedicated to mastering the art of low-level programming...",
-            titleSkills: isArabic ? "المهارات التقنية" : "Technical Arsenal",
-            titleProjects: isArabic ? "أبرز المشاريع" : "Featured Projects",
-            p1Title: isArabic ? "قياس المسافات الذكي" : "Distance Measurement",
-            p1Desc: isArabic ? "نظام قياس فوري باستخدام الأمواج فوق الصوتية مع شاشة LCD." : "Real-time ultrasonic measurement with LCD interface.",
-            p2Title: isArabic ? "جدولة مهام RTOS" : "RTOS Task Scheduler",
-            p2Desc: isArabic ? "نظام متعدد المهام لإدارة البيانات والمدخلات في وقت واحد." : "Multi-threaded system managing sensor data simultaneously.",
-            p3Title: isArabic ? "تصميم وحدة طاقة" : "Power Supply Design",
-            p3Desc: isArabic ? "محول طاقة عالي الكفاءة من AC إلى DC مخصص للمختبرات." : "High-efficiency AC to DC converter designed for laboratory testing.",
-            titleContact: isArabic ? "تواصل معي" : "Get In Touch",
-            textContact: isArabic ? "هل لديك مشروع أو استفسار؟ لا تتردد بمراسلتي." : "Interested in a collaboration or just want to say hi?",
-            footerText: isArabic ? "© 2026 سلطان هزازي | صُمم لتميز الأنظمة المدمجة" : "© 2026 Sultan Hazazi | Designed for Embedded Systems Excellence"
-        };
+let isArabic = false;
+function toggleLanguage() {
+    isArabic = !isArabic;
+    document.body.style.direction = isArabic ? 'rtl' : 'ltr';
 
-        for (let id in translations) {
-            const el = document.getElementById(id);
-            if (el) el.innerText = translations[id];
-        }
+    const translations = {
+        navAbout: isArabic ? "عني" : "About",
+        navSkills: isArabic ? "مهاراتي" : "Skills",
+        navProjects: isArabic ? "مشاريعي" : "Portfolio",
+        navContact: isArabic ? "تواصل" : "Contact",
+        heroTitle: isArabic ? "سلطان هزازي" : "Sultan Hazazi",
+        titleAbout: isArabic ? "من أنا؟" : "Who Am I?",
+        textAbout: isArabic ? "طالب هندسة حاسب متخصص في الأنظمة المدمجة والمتحكمات الدقيقة، أسعى لإتقان البرمجة منخفضة المستوى والأنظمة الزمنية الحقيقية باستخدام C و STM32." : "Computer Engineering student dedicated to mastering low-level programming...",
+        titleSkills: isArabic ? "المهارات التقنية" : "Technical Arsenal",
+        titleProjects: isArabic ? "أبرز المشاريع" : "Featured Projects",
+        p1Title: isArabic ? "قياس المسافات الذكي" : "Distance Measurement",
+        p1Desc: isArabic ? "نظام قياس فوري باستخدام الأمواج فوق الصوتية مع شاشة LCD." : "Real-time ultrasonic measurement with LCD interface.",
+        p2Title: isArabic ? "جدولة مهام RTOS" : "RTOS Task Scheduler",
+        p2Desc: isArabic ? "نظام متعدد المهام لإدارة البيانات والمدخلات في وقت واحد." : "Multi-threaded system managing sensor data simultaneously.",
+        p3Title: isArabic ? "تصميم وحدة طاقة" : "Power Supply Design",
+        p3Desc: isArabic ? "محول طاقة عالي الكفاءة من AC إلى DC مخصص للمختبرات." : "High-efficiency AC to DC converter designed for laboratory testing.",
+        titleContact: isArabic ? "تواصل معي" : "Get In Touch",
+        textContact: isArabic ? "هل لديك مشروع أو استفسار؟ لا تتردد بمراسلتي." : "Interested in a collaboration or just want to say hi?",
+        footerText: isArabic ? "© 2026 سلطان هزازي | صُمم لتميز الأنظمة المدمجة" : "© 2026 Sultan Hazazi | Designed for Embedded Systems Excellence"
+    };
+
+    for (let id in translations) {
+        const el = document.getElementById(id);
+        if (el) el.innerText = translations[id];
     }
+}
 </script>
 
 </body>
