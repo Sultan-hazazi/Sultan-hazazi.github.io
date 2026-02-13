@@ -38,3 +38,33 @@ color:#00ffcc;
 margin-top:30px;
 }
 
+/* About Section with Image */
+.about-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    max-width: 900px;
+    margin: auto;
+}
+
+.about-img {
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.about-img:hover {
+    transform: scale(1.05);
+}
+
+#textAbout {
+    flex: 1;
+    font-size: 1.15em;
+    color: #555;
+    text-align: justify;
+}
