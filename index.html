@@ -8,34 +8,64 @@
     <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
-<aside class="sidebar">
-    <div class="sidebar-header">
-        <img src="https://digiproces.com/wp-content/uploads/2025/02/embedded-systems_DigiProces.jpg" alt="Sultan Hazazi" class="sidebar-img">
-        <h1>Sultan Hazazi</h1>
-        <p>Embedded Systems Engineer</p>
-        <p>University of Tabuk</p>
-    </div>
+<body dir="ltr">
 
-    <nav class="sidebar-nav">
-        <a href="#about">HOME</a>
-        <a href="#about">ABOUT</a>
-        <a href="#skills">SKILLS</a>
-        <a href="#projects">PROJECTS</a>
-        <a href="#contact">CONTACT</a>
-    </nav>
+    <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
+        <div class="text-center">
+            <div class="author-img" style="background-image: url('https://digiproces.com/wp-content/uploads/2025/02/embedded-systems_DigiProces.jpg');"></div>
+            
+            <h1 id="colorlib-logo"><a href="index.html" id="heroTitle">Sultan Hazazi</a></h1>
+            
+            <span class="position">
+                <a href="#" id="heroSub">Embedded Systems Engineer</a> 
+                <br><span id="deptName">Computer Engineering Department</span>, 
+                <br><span id="univName">University of Tabuk</span>
+            </span>
+        </div>
 
-    <div class="sidebar-contact">
-        <a href="mailto:sultan.hazazi.embedded@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
-        <a href="https://github.com/Sultan-hazazi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
-    </div>
+        <nav id="colorlib-main-menu" role="navigation" class="navbar">
+            <div id="navbar" class="collapse">
+                <ul>
+                    <li class="active"><a href="#" data-nav-section="home" id="navHome">Home</a></li>
+                    <li><a href="#about" data-nav-section="about" id="navAbout">About</a></li>
+                    <li><a href="#skills" data-nav-section="skills" id="navSkills">Skills</a></li>
+                    <li><a href="#projects" data-nav-section="work" id="navProjects">Projects</a></li>
+                    <li><a href="#contact" data-nav-section="contact" id="navContact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
 
-    <button class="lang-switch" onclick="toggleLanguage()">AR / EN</button>
+        <div class="text-center" style="margin: 20px 0;">
+            <button class="lang-switch" onclick="toggleLanguage()" id="langBtn">AR / EN</button>
+        </div>
 
-    <footer class="sidebar-footer">
-        &copy; 2026 Sultan Hazazi
-    </footer>
-</aside>
+        <div class="colorlib-footer">
+            <p id="findMeText">Find Sultan Hazazi <i class="fas fa-heart" aria-hidden="true"></i>
+                <br>
+                <div class="social-icons">
+                    <a href="mailto:sultan.hazazi.embedded@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://github.com/Sultan-hazazi" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                </div>
+            </p>    
+            <p><small id="footerCopyright">&copy; 2026 Sultan Hazazi. <br> Powered by Colorlib inspired design.</small></p>
+        </div>
+    </aside>
+
+    <main id="colorlib-main">
+        <section id="home" class="hero-wrap">
+            </section>
+
+        <section id="about" class="colorlib-about">
+            <div class="container-fluid">
+                <h2 id="titleAbout">Who Am I?</h2>
+                <p id="textAbout">Computer Engineering student at the university, dedicated to mastering the art of low-level programming...</p>
+            </div>
+        </section>
+
+        </main>
+
+    <script src=
 
 
     <!-- Main Content -->
