@@ -1,27 +1,35 @@
-let lang = "en";
+let isArabic = false;
 
-function switchLang() {
-// Flip About Section for Arabic
-const aboutContainer = document.querySelector('.about-container');
-if (aboutContainer) {
-    aboutContainer.style.flexDirection = isArabic ? 'row-reverse' : 'row';
-}
+function toggleLanguage() {
+    isArabic = !isArabic;
+    document.body.dir = isArabic ? "rtl" : "ltr";
+    
+    // تغيير نصوص القائمة الجانبية
+    document.getElementById("heroTitle").innerText = isArabic ? "سلطان هزازي" : "Sultan Hazazi";
+    document.getElementById("heroSub").innerText = isArabic ? "مهندس أنظمة مدمجة" : "Embedded Systems Engineer";
+    document.getElementById("deptName").innerText = isArabic ? "قسم هندسة الحاسب" : "Computer Engineering Department";
+    document.getElementById("univName").innerText = isArabic ? "جامعة تبوك" : "University of Tabuk";
+    document.getElementById("langBtn").innerText = isArabic ? "English" : "العربية";
 
+    // تغيير نصوص المحتوى
+    document.getElementById("navHome").innerText = isArabic ? "الرئيسية" : "Home";
+    document.getElementById("navAbout").innerText = isArabic ? "عني" : "About";
+    document.getElementById("navSkills").innerText = isArabic ? "مهاراتي" : "Skills";
+    document.getElementById("navProjects").innerText = isArabic ? "المشاريع" : "Projects";
+    document.getElementById("navContact").innerText = isArabic ? "تواصل" : "Contact";
 
-document.getElementById("aboutTitle").innerText = "نبذة عني";
-document.getElementById("aboutText").innerText =
-"طالب هندسة حاسب متخصص في الأنظمة المدمجة والمتحكمات الدقيقة باستخدام C و STM32";
+    document.getElementById("titleAbout").innerText = isArabic ? "من أنا؟" : "Who Am I?";
+    document.getElementById("textAbout").innerText = isArabic ? 
+        "طالب هندسة حاسب مكرس جهدي لإتقان البرمجة منخفضة المستوى والأنظمة المدمجة باستخدام C/C++ و STM32." : 
+        "Computer Engineering student dedicated to mastering low-level programming and embedded systems using C/C++ and STM32.";
 
-document.getElementById("skillsTitle").innerText = "المهارات";
-document.getElementById("projectsTitle").innerText = "المشاريع";
+    document.getElementById("projectsTitle").innerText = isArabic ? "معرض المشاريع" : "Portfolio";
+    document.getElementById("uniTitle").innerText = isArabic ? "مشاريع الجامعة" : "University Projects";
+    document.getElementById("embTitle").innerText = isArabic ? "الأنظمة المدمجة" : "Embedded Systems";
 
-document.getElementById("uniTitle").innerText = "مشاريع الجامعة";
-document.getElementById("elecTitle").innerText = "مشاريع كهرباء وإلكترونيات";
-document.getElementById("embTitle").innerText = "مشاريع الأنظمة المدمجة";
-
-lang = "ar";
-} 
-else {
-location.reload();
-}
+    // تعديل اتجاه الصور في قسم About
+    const aboutContainer = document.querySelector('.about-container');
+    if (aboutContainer) {
+        aboutContainer.style.flexDirection = isArabic ? 'row-reverse' : 'row';
+    }
 }
