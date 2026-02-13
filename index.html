@@ -3,84 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sultan Hazazi | Embedded Systems Portfolio</title>
+    <title>Sultan Hazazi | Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body dir="ltr">
 
-<button class="lang-switch" onclick="toggleLanguage()" id="langBtn">العربية</button>
-
-<nav>
-    <a href="#about" id="navAbout">About</a>
-    <a href="#skills" id="navSkills">Skills</a>
-    <a href="#projects" id="navProjects">Portfolio</a>
-    <a href="#contact" id="navContact">Contact</a>
-</nav>
-
-<header>
-    <h1 id="heroTitle">Sultan Hazazi</h1>
-    <p id="heroSub">Embedded Systems Engineer | STM32 Developer</p>
-</header>
-
-<div class="container">
-    <section id="about">
-        <h2 id="titleAbout"><i class="fas fa-user-circle"></i> Who Am I?</h2>
-        <p id="textAbout">
-            Computer Engineering student at the university, dedicated to mastering low-level programming and embedded systems using C/C++ and STM32.
-        </p>
-    </section>
-
-    <section id="skills">
-        <h2 id="titleSkills"><i class="fas fa-microchip"></i> Technical Arsenal</h2>
-        <div class="skills-container">
-            <div class="skill-card">STM32 / ARM Cortex</div>
-            <div class="skill-card">Embedded C / C++</div>
-            <div class="skill-card">FreeRTOS</div>
-            <div class="skill-card">I2C / SPI / UART</div>
-            <div class="skill-card">PCB Design</div>
-            <div class="skill-card">IoT & Sensors</div>
-            <div class="skill-card">Digital Logic Design</div>
-        </div>
-    </section>
-
-    <section id="projects">
-        <h2 id="titleProjects"><i class="fas fa-project-diagram"></i> Featured Projects</h2>
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1555664424-778a1e5e1b48?q=80&w=400" class="gallery-img">
-                <div class="gallery-content">
-                    <span class="tag">STM32</span>
-                    <h3 id="p1Title">Distance Measurement</h3>
-                    <p id="p1Desc">Real-time ultrasonic measurement with LCD interface and hardware interrupts.</p>
-                </div>
+    <aside class="sidebar">
+        <div class="profile-info">
+            <div class="profile-img">
+                <img src="https://via.placeholder.com/150" alt="Sultan Hazazi">
             </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=400" class="gallery-img">
-                <div class="gallery-content">
-                    <span class="tag">FreeRTOS</span>
-                    <h3 id="p2Title">RTOS Task Scheduler</h3>
-                    <p id="p2Desc">Multi-threaded system managing sensor data and user inputs simultaneously.</p>
-                </div>
-            </div>
+            <h1 id="heroTitle">Sultan Hazazi</h1>
+            <p class="subtitle" id="heroSub">Embedded Systems Engineer</p>
+            <p class="university">University of Tabuk</p>
         </div>
-    </section>
 
-    <section id="contact" class="contact-section">
-        <h2 id="titleContact">Get In Touch</h2>
-        <p id="textContact">Interested in a collaboration or just want to say hi?</p>
-        <div class="contact-links">
-            <a href="mailto:sultan.hazazi.embedded@gmail.com"><i class="fas fa-envelope"></i></a>
+        <nav class="side-nav">
+            <ul>
+                <li><a href="#home" id="navHome" class="active">HOME</a></li>
+                <li><a href="#about" id="navAbout">ABOUT</a></li>
+                <li><a href="#skills" id="navSkills">SKILLS</a></li>
+                <li><a href="#projects" id="navProjects">PROJECTS</a></li>
+                <li><a href="#contact" id="navContact">CONTACT</a></li>
+            </ul>
+        </nav>
+
+        <div class="social-links">
             <a href="https://github.com/Sultan-hazazi" target="_blank"><i class="fab fa-github"></i></a>
+            <a href="mailto:sultan.hazazi.embedded@gmail.com"><i class="fas fa-envelope"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
         </div>
-    </section>
-</div>
 
-<footer>
-    <p id="footerText">&copy; 2026 Sultan Hazazi | Designed for Embedded Systems Excellence</p>
-</footer>
+        <button class="lang-switch" onclick="toggleLanguage()" id="langBtn">العربية</button>
+        
+        <div class="footer-note">
+            <p>© 2026 Colorlib.</p>
+        </div>
+    </aside>
 
-<script src="script.js"></script>
+    <main class="main-content">
+        <section id="home" class="hero-section">
+            </section>
+
+        <section id="about" class="content-section">
+            <h2 id="titleAbout">About Me</h2>
+            <p id="textAbout">Computer Engineering student at the University of Tabuk, dedicated to mastering low-level programming and embedded systems using C/C++ and STM32.</p>
+        </section>
+
+        <section id="skills" class="content-section">
+            <h2 id="titleSkills">Technical Skills</h2>
+            <div class="skills-grid">
+                <span>STM32 / ARM</span>
+                <span>Embedded C</span>
+                <span>FreeRTOS</span>
+                <span>PCB Design</span>
+            </div>
+        </section>
+
+        </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
