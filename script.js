@@ -13,7 +13,7 @@ function toggleLanguage() {
     // تغيير نصوص القائمة الجانبية
     document.getElementById("heroTitle").innerText = isArabic ? "سلطان هزازي" : "Sultan Hazazi";
     document.getElementById("heroSub").innerText = isArabic ? "مهندس أنظمة مدمجة" : "Embedded Systems Engineer";
-    document.getElementById("deptName").innerText = isArabic ? "قسم هندسة الحاسب" : "Computer Engineering Department";
+    document.getElementById("deptName").innerText = isArabic ? " هندسة الحاسب" : "Computer Engineering ";
     document.getElementById("univName").innerText = isArabic ? "جامعة تبوك" : "University of Tabuk";
     document.getElementById("langBtn").innerText = isArabic ? "English" : "العربية";
 
