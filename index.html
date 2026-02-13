@@ -1,77 +1,75 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Sultan Hazazi | Embedded Engineer</title>
-<link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sultan Hazazi | Embedded Systems Engineer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root { --primary: #2c3e50; --accent: #3498db; --bg: #ffffff; }
+        body { font-family: 'Inter', sans-serif; line-height: 1.6; margin: 0; color: #333; background: #f9f9f9; }
+        header { background: var(--primary); color: white; padding: 100px 20px; text-align: center; }
+        nav { position: sticky; top: 0; background: white; box-shadow: 0 2px 5px rgba(0,0,0,0.1); padding: 10px; text-align: center; z-index: 1000; }
+        nav a { margin: 0 15px; text-decoration: none; color: var(--primary); font-weight: bold; }
+        .container { max-width: 900px; margin: auto; padding: 20px; }
+        section { padding: 60px 0; border-bottom: 1px solid #eee; }
+        .skill-tag { background: var(--accent); color: white; padding: 5px 12px; border-radius: 20px; display: inline-block; margin: 5px; font-size: 0.9em; }
+        .project-card { background: white; border-left: 5px solid var(--accent); padding: 20px; margin: 20px 0; box-shadow: 0 3px 10px rgba(0,0,0,0.05); }
+        footer { text-align: center; padding: 40px; background: var(--primary); color: white; }
+    </style>
 </head>
+<body>
 
-<body id="body">
+<nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+</nav>
 
 <header>
-<h1>Sultan Hazazi</h1>
-<p>Computer Engineering | Embedded Systems | STM32 | RTOS</p>
-<button onclick="switchLang()">AR / EN</button>
+    <h1>Sultan Hazazi</h1>
+    <p>Computer Engineering Student & Embedded Systems Enthusiast</p>
 </header>
 
-<section>
-<h2 id="aboutTitle">About Me</h2>
-<p id="aboutText">
-Computer Engineering student focused on Embedded Systems, Microcontrollers and low-level programming using C and STM32.
-</p>
-</section>
+<div class="container">
+    <section id="about">
+        <h2><i class="fas fa-user-circle"></i> About Me</h2>
+        <p>I am a computer engineering student passionate about low-level programming and microcontrollers. My work focuses on bridging the gap between hardware and software using C/C++ and STM32.</p>
+    </section>
 
-<section>
-<h2 id="skillsTitle">Skills</h2>
-<ul>
-<li>Embedded C</li>
-<li>STM32</li>
-<li>RTOS</li>
-<li>UART, SPI, I2C</li>
-<li>Digital Electronics</li>
-<li>Git & GitHub</li>
-</ul>
-</section>
+    <section id="skills">
+        <h2><i class="fas fa-microchip"></i> Technical Skills</h2>
+        <div class="skill-tag">C / C++ Programming</div>
+        <div class="skill-tag">STM32 & ARM Cortex</div>
+        <div class="skill-tag">RTOS (FreeRTOS)</div>
+        <div class="skill-tag">IoT & Sensors</div>
+        <div class="skill-tag">Digital Logic Design</div>
+    </section>
 
-<section>
-<h2 id="projectsTitle">Projects</h2>
+    <section id="projects">
+        <h2><i class="fas fa-code-branch"></i> Key Projects</h2>
+        <div class="project-card">
+            <h3>Driver Development</h3>
+            <p>Developing low-level drivers for sensors and communication protocols (I2C, SPI, UART) using STM32.</p>
+        </div>
+        <div class="project-card">
+            <h3>IoT Monitoring System</h3>
+            <p>Real-time data acquisition and monitoring using ESP32 and MQTT protocols.</p>
+        </div>
+    </section>
 
-<h3 id="uniTitle">University Projects</h3>
-<div class="project">
-<h4>Digital Logic Design</h4>
-<p>Logic circuits, flip-flops and combinational systems.</p>
+    <section id="contact">
+        <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+        <p>Feel free to reach out for collaborations or inquiries:</p>
+        <p>📧 Email: <a href="mailto:sultan.hazazi.embedded@gmail.com">sultan.hazazi.embedded@gmail.com</a></p>
+        <p>🔗 GitHub: <a href="https://github.com/Sultan-hazazi">Sultan-hazazi</a></p>
+    </section>
 </div>
 
-<h3 id="elecTitle">Electrical Projects</h3>
-<div class="project">
-<h4>Power Supply Design</h4>
-<p>AC to DC regulated power supply using rectifier and filters.</p>
-</div>
+<footer>
+    <p>&copy; 2026 Sultan Hazazi | Designed for Embedded Systems Excellence</p>
+</footer>
 
-<h3 id="embTitle">Embedded Systems Projects</h3>
-<div class="project">
-<h4>Smart Distance Measurement System</h4>
-<p>Ultrasonic sensor + LCD + STM32 real-time measurement.</p>
-</div>
-
-<div class="project">
-<h4>RTOS Task Manager</h4>
-<p>FreeRTOS multi-task control system on STM32.</p>
-</div>
-
-<div class="project">
-<h4>Smart Alarm System</h4>
-<p>Multi-sensor alarm with UART and Bluetooth.</p>
-</div>
-
-</section>
-
-<section>
-<h2>Contact</h2>
-<p>Email: sultan.hazazi.embedded@gmail.com</p>
-<p>GitHub: <a href="https://github.com/Sultan-hazazi">github.com/Sultan-hazazi</a></p>
-</section>
-
-<script src="script.js"></script>
 </body>
 </html>
