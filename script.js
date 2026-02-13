@@ -2,40 +2,58 @@ let isArabic = false;
 
 function toggleLanguage() {
     isArabic = !isArabic;
-    document.body.dir = isArabic ? "rtl" : "ltr";
-    // أضف هذه داخل كائن translations
-"navCert": isArabic ? "الشهادات" : "Certificates",
-"certTitle": isArabic ? "الشهادات المهنية" : "Certifications",
-
-// إذا كنت تريد ترجمة محتوى الشهادات نفسها (اختياري)
-// يمكنك إضافة IDs لكل شهادة وتغيير نصوصها هنا بنفس الطريقة
     
-    // تغيير نصوص القائمة الجانبية
-    document.getElementById("heroTitle").innerText = isArabic ? "سلطان هزازي" : "Sultan Hazazi";
-    document.getElementById("heroSub").innerText = isArabic ? "مهندس أنظمة مدمجة" : "Embedded Systems Engineer";
-    document.getElementById("deptName").innerText = isArabic ? " هندسة الحاسب" : "Computer Engineering ";
-    document.getElementById("univName").innerText = isArabic ? "جامعة تبوك" : "University of Tabuk";
-    document.getElementById("langBtn").innerText = isArabic ? "English" : "العربية";
+    // 1. تغيير اتجاه الصفحة (L-R أو R-L)
+    document.body.dir = isArabic ? "rtl" : "ltr";
+    
+    // 2. مصفوفة الترجمة الشاملة لجميع العناصر
+    const translations = {
+        // نصوص القائمة الجانبية (Aside)
+        "heroTitle": isArabic ? "سلطان هزازي" : "Sultan Hazazi",
+        "heroSub": isArabic ? "مهندس أنظمة مدمجة" : "Embedded Systems Engineer",
+        "deptName": isArabic ? "هندسة الحاسب" : "Computer Engineering",
+        "univName": isArabic ? "جامعة تبوك" : "University of Tabuk",
+        "langBtn": isArabic ? "English" : "العربية",
 
-    // تغيير نصوص المحتوى
-    document.getElementById("navHome").innerText = isArabic ? "الرئيسية" : "Home";
-    document.getElementById("navAbout").innerText = isArabic ? "عني" : "About";
-    document.getElementById("navSkills").innerText = isArabic ? "مهاراتي" : "Skills";
-    document.getElementById("navProjects").innerText = isArabic ? "المشاريع" : "Projects";
-    document.getElementById("navContact").innerText = isArabic ? "تواصل" : "Contact";
+        // روابط التنقل (Navigation)
+        "navHome": isArabic ? "الرئيسية" : "Home",
+        "navAbout": isArabic ? "عني" : "About",
+        "navSkills": isArabic ? "مهاراتي" : "Skills",
+        "navProjects": isArabic ? "المشاريع" : "Projects",
+        "navCert": isArabic ? "الشهادات" : "Certificates",
+        "navContact": isArabic ? "تواصل" : "Contact",
 
-    document.getElementById("titleAbout").innerText = isArabic ? "من أنا؟" : "Who Am I?";
-    document.getElementById("textAbout").innerText = isArabic ? 
-        "طالب هندسة حاسب مكرس جهدي لإتقان البرمجة منخفضة المستوى والأنظمة المدمجة باستخدام C/C++ و STM32." : 
-        "Computer Engineering student dedicated to mastering low-level programming and embedded systems using C/C++ and STM32.";
+        // عناوين الأقسام (Section Titles)
+        "titleAbout": isArabic ? "من أنا؟" : "Who Am I?",
+        "projectsTitle": isArabic ? "معرض المشاريع" : "Portfolio",
+        "uniTitle": isArabic ? "مشاريع الجامعة" : "University Projects",
+        "embTitle": isArabic ? "الأنظمة المدمجة" : "Embedded Systems",
+        "certTitle": isArabic ? "الشهادات المهنية" : "Certifications",
 
-    document.getElementById("projectsTitle").innerText = isArabic ? "معرض المشاريع" : "Portfolio";
-    document.getElementById("uniTitle").innerText = isArabic ? "مشاريع الجامعة" : "University Projects";
-    document.getElementById("embTitle").innerText = isArabic ? "الأنظمة المدمجة" : "Embedded Systems";
+        // نص "عني" (النسخة المرتبة والاحترافية)
+        "textAbout": isArabic ? 
+            "أنا سلطان هزازي، طالب هندسة حاسب لدي شغف قوي بالأنظمة المدمجة، المتحكمات الدقيقة، والبرمجة منخفضة المستوى. أتخصص في تطوير أنظمة فعالة وموثوقة باستخدام C/C++ و STM32." : 
+            "I am Sultan Hazazi, a Computer Engineering student with a strong passion for Embedded Systems, Microcontrollers, and low-level programming. I specialize in developing efficient and reliable systems using C/C++, STM32, ARM Cortex, and RTOS."
+    };
 
-    // تعديل اتجاه الصور في قسم About
+    // 3. حلقة تكرار لتحديث كل النصوص التي لها ID في الصفحة
+    for (const id in translations) {
+        const element = document.getElementById(id);
+        if (element) {
+            // استخدام innerHTML لكي تظهر التنسيقات مثل <br> أو <strong> إذا وجدت
+            element.innerHTML = translations[id];
+        }
+    }
+
+    // 4. تعديل اتجاه العناصر البصرية (مثل قسم About)
     const aboutContainer = document.querySelector('.about-container');
     if (aboutContainer) {
         aboutContainer.style.flexDirection = isArabic ? 'row-reverse' : 'row';
+    }
+
+    // 5. تعديل محاذاة القائمة الجانبية
+    const aside = document.getElementById("colorlib-aside");
+    if (aside) {
+        aside.style.textAlign = isArabic ? "right" : "center";
     }
 }
