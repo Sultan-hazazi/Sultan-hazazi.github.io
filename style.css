@@ -16,7 +16,7 @@ body {
 
 /* Sidebar */
 #colorlib-aside {
-    width: 300px;
+    width: 250px;
     height: 100vh;
     position: fixed;
     background: var(--sidebar-bg);
