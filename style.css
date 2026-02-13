@@ -1,77 +1,40 @@
-:root {
-    --side-bg: #f9f9f9;
-    --text-color: #333;
-    --accent: #2c98f0;
-    --gray: #999;
-}
-
 body {
-    font-family: 'Segoe UI', 'Tajawal', sans-serif;
-    margin: 0;
-    display: flex; /* لتوزيع القائمة والمحتوى بجانب بعض */
+background:#0d1117;
+color:white;
+font-family: Arial;
+margin:0;
+padding:0;
 }
 
-/* القائمة الجانبية */
-.sidebar {
-    width: 300px;
-    height: 100vh;
-    background: var(--side-bg);
-    position: fixed;
-    left: 0;
-    top: 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 60px 20px;
-    text-align: center;
-    border-right: 1px solid #eee;
+header {
+text-align:center;
+padding:40px;
+background:#161b22;
 }
 
-.profile-img img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    margin-bottom: 20px;
-    object-fit: cover;
+section {
+padding:40px;
+max-width:800px;
+margin:auto;
 }
 
-.sidebar h1 { font-size: 22px; margin: 10px 0 5px; letter-spacing: 1px; }
-.subtitle { color: var(--accent); font-size: 12px; font-weight: bold; text-transform: uppercase; }
-.university { font-size: 13px; color: var(--gray); margin-bottom: 30px; }
-
-.side-nav ul { list-style: none; padding: 0; width: 100%; }
-.side-nav li { margin: 15px 0; }
-.side-nav a {
-    text-decoration: none;
-    color: var(--text-color);
-    font-size: 13px;
-    font-weight: 400;
-    letter-spacing: 2px;
-    transition: 0.3s;
+.project {
+background:#161b22;
+padding:20px;
+margin:20px 0;
+border-radius:10px;
 }
-.side-nav a.active, .side-nav a:hover { color: var(--accent); border-bottom: 1px solid var(--accent); }
+button {
+padding:10px;
+background:#00ffcc;
+border:none;
+border-radius:6px;
+cursor:pointer;
+}
+a {color:#00ffcc;}
 
-.social-links { margin: auto 0 20px; }
-.social-links a { margin: 0 10px; color: #000; font-size: 18px; }
-
-.lang-switch {
-    background: none; border: 1px solid #ddd; padding: 5px 15px;
-    cursor: pointer; font-family: 'Tajawal'; font-size: 12px;
+h3 {
+color:#00ffcc;
+margin-top:30px;
 }
 
-/* المحتوى الرئيسي */
-.main-content {
-    margin-left: 300px; /* لترك مساحة للقائمة الثابتة */
-    width: 100%;
-    padding: 0;
-}
-
-.content-section { padding: 80px 10%; }
-h2 { font-size: 18px; text-transform: uppercase; letter-spacing: 5px; margin-bottom: 30px; }
-
-/* للهواتف */
-@media (max-width: 768px) {
-    body { flex-direction: column; }
-    .sidebar { width: 100%; height: auto; position: relative; }
-    .main-content { margin-left: 0; }
-}
