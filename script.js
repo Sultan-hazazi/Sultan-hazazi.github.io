@@ -1,11 +1,12 @@
 let lang = "en";
 
 function switchLang() {
-const body = document.getElementById("body");
+// Flip About Section for Arabic
+const aboutContainer = document.querySelector('.about-container');
+if (aboutContainer) {
+    aboutContainer.style.flexDirection = isArabic ? 'row-reverse' : 'row';
+}
 
-if (lang === "en") {
-body.style.direction = "rtl";
-body.style.textAlign = "right";
 
 document.getElementById("aboutTitle").innerText = "نبذة عني";
 document.getElementById("aboutText").innerText =
