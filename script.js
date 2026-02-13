@@ -3,6 +3,12 @@ let isArabic = false;
 function toggleLanguage() {
     isArabic = !isArabic;
     document.body.dir = isArabic ? "rtl" : "ltr";
+    // أضف هذه داخل كائن translations
+"navCert": isArabic ? "الشهادات" : "Certificates",
+"certTitle": isArabic ? "الشهادات المهنية" : "Certifications",
+
+// إذا كنت تريد ترجمة محتوى الشهادات نفسها (اختياري)
+// يمكنك إضافة IDs لكل شهادة وتغيير نصوصها هنا بنفس الطريقة
     
     // تغيير نصوص القائمة الجانبية
     document.getElementById("heroTitle").innerText = isArabic ? "سلطان هزازي" : "Sultan Hazazi";
