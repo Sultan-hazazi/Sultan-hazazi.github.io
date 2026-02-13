@@ -1,24 +1,26 @@
-let isArabic = false;
+let lang = "en";
 
-function toggleLanguage() {
-    isArabic = !isArabic;
-    document.body.dir = isArabic ? 'rtl' : 'ltr';
-    document.getElementById('langBtn').innerText = isArabic ? 'English' : 'العربية';
+function switchLang() {
+const body = document.getElementById("body");
 
-    const translations = {
-        navHome: isArabic ? "الرئيسية" : "HOME",
-        navAbout: isArabic ? "عني" : "ABOUT",
-        navSkills: isArabic ? "مهاراتي" : "SKILLS",
-        navProjects: isArabic ? "مشاريعي" : "PROJECTS",
-        navContact: isArabic ? "تواصل" : "CONTACT",
-        heroTitle: isArabic ? "سلطان هزازي" : "Sultan Hazazi",
-        heroSub: isArabic ? "مهندس أنظمة مدمجة" : "Embedded Systems Engineer",
-        titleAbout: isArabic ? "من أنا؟" : "About Me"
-        // أكمل بقية النصوص هنا...
-    };
+if (lang === "en") {
+body.style.direction = "rtl";
+body.style.textAlign = "right";
 
-    for (let id in translations) {
-        const el = document.getElementById(id);
-        if (el) el.innerText = translations[id];
-    }
+document.getElementById("aboutTitle").innerText = "نبذة عني";
+document.getElementById("aboutText").innerText =
+"طالب هندسة حاسب متخصص في الأنظمة المدمجة والمتحكمات الدقيقة باستخدام C و STM32";
+
+document.getElementById("skillsTitle").innerText = "المهارات";
+document.getElementById("projectsTitle").innerText = "المشاريع";
+
+document.getElementById("uniTitle").innerText = "مشاريع الجامعة";
+document.getElementById("elecTitle").innerText = "مشاريع كهرباء وإلكترونيات";
+document.getElementById("embTitle").innerText = "مشاريع الأنظمة المدمجة";
+
+lang = "ar";
+} 
+else {
+location.reload();
+}
 }
