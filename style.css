@@ -156,16 +156,27 @@ body[dir="rtl"] .cert-icon { margin-right: 0; margin-left: 20px; }
     font-size: 13px;
     transition: all 0.3s ease;
 }
-
-.btn-view:hover {
-    background-color: #2ecc71;
-    color: #fff;
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
-    transform: translateY(-2px);
+/* تنسيق رابط المشروع داخل البطاقة */
+.project-link {
+    color: #2ecc71; /* لون أخضر تقني هادئ */
+    text-decoration: none;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
-/* تأثير عند تمرير الماوس على البطاقة بالكامل */
-.project-card:hover {
-    border-color: #2ecc71;
-    transform: translateY(-5px);
+.project-link i {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.project-link:hover {
+    color: #ffffff; /* يتحول للأبيض عند تمرير الماوس */
+    text-shadow: 0 0 8px rgba(46, 204, 113, 0.8);
+}
+
+.project-link:hover i {
+    transform: translate(2px, -2px); /* حركة خفيفة للأيقونة عند اللمس */
+    opacity: 1;
 }
