@@ -174,7 +174,7 @@ body[dir="rtl"] .cert-icon { margin-right: 0; margin-left: 20px; }
 }
 
 .project-link:hover {
-    color: #ffffff; /* يتحول للأبيض عند تمرير الماوس */
+    color: #30363d; /* يتحول للأبيض عند تمرير الماوس */
     text-shadow: 0 0 10px rgba(45, 184, 77, 0.8); /* توهج أخضر بنفس الدرجة */
 }
 
