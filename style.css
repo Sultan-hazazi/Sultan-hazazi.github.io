@@ -159,7 +159,7 @@ body[dir="rtl"] .cert-icon { margin-right: 0; margin-left: 20px; }
 /* تنسيق رابط المشروع داخل البطاقة */
 /* تنسيق رابط المشروع بلون أخضر GitHub */
 .project-link {
-    color: #2db84d; /* نفس لون "يفتح" في الصورة */
+    color: #ffffff; /* نفس لون "يفتح" في الصورة */
     text-decoration: none;
     transition: all 0.3s ease;
     display: flex;
